@@ -111,11 +111,11 @@ scanlist:
 system("clear");
     echo $bold . $blue . "
       +--------------------------------------------------------------+
-      +                  List Of Scans Or Actions                    +
+      +              扫个屁！整天只会扫描网站来装批有种就来域名爆破          +
       +--------------------------------------------------------------+
-            $lblue Scanning Site : " . $fgreen . $ipsl . $ip . $blue . "
+            $lblue  您要扫描的网页: " . $fgreen . $ipsl . $ip . $white . "
       \n\n";
-    echo $yellow . " [0]  Basic Recon$white (Site Title, IP Address, CMS, Cloudflare Detection, Robots.txt Scanner)$yellow \n [1]  Whois侦查 \n [2]  Geo-IP侦查 \n [3]  Grab Banners \n [4]  DNS侦查 \n [5]  Subnet Calculator \n [6]  NMAP端口扫描 \n [7]  域名爆破 \n [8]  反侦察IP地址 & CMS Detection \n [9]  SQLi 扫描$white (Finds Links With Parameter And Scans For Error Based SQLi)$yellow \n [10] Bloggers View$white (Information That Bloggers Might Be Interested In)$yellow \n [11] WordPress扫描$white (Only If The Target Site Runs On WP)$yellow \n [12] Crawler \n [13] MX Lookup \n$magenta [A]  选什么？！给我全扫！ - (The Old Lame Scanner) \n$blue [F]  Fix (Checks For Required Modules and Installs Missing Ones) \n$fgreen [U]  Check For Updates \n$white [B]  我改主意了我要扫描其它网站 (Back To Site Selection) \n$red [Q]  先下了 \n\n" . $cln;
+    echo $lblue . " [0]  Basic Recon$white (Site Title, IP Address, CMS, Cloudflare Detection, Robots.txt Scanner)$yellow \n [1]  Whois侦查 \n [2]  Geo-IP侦查 \n [3]  Grab Banners \n [4]  DNS侦查 \n [5]  Subnet Calculator \n [6]  NMAP端口扫描 \n [7]  域名爆破 \n [8]  反侦察IP地址 & CMS Detection \n [9]  SQLi 扫描$white (Finds Links With Parameter And Scans For Error Based SQLi)$yellow \n [10] Bloggers View$white (Information That Bloggers Might Be Interested In)$yellow \n [11] WordPress扫描$white (Only If The Target Site Runs On WP)$yellow \n [12] Crawler \n [13] MX Lookup \n$magenta [A]  选什么？！给我全扫！ - (The Old Lame Scanner) \n$blue [F]  Fix (Checks For Required Modules and Installs Missing Ones) \n$fgreen [U]  Check For Updates \n$white [B]  我改主意了我要扫描其它网站 (Back To Site Selection) \n$red [Q]  先下了 \n\n" . $cln;
 askscan:
     userinput("Choose Any Scan OR Action From The Above List");
     $scan = trim(fgets(STDIN, 1024));

@@ -7,7 +7,7 @@ function update()
     {
         echo "\n\e[91m\e[1m[+] RED HAWK UPDATE UTILITY [+]\nUpdate in progress, please wait...\n\n$cln";
         system("git fetch origin && git reset --hard origin/master && git clean -f -d");
-        echo $bold . $fgreen . "[i] Job finished successfully! Please Restart RED HAWK \n" . $cln;
+        echo $bold . $fgreen . "[i] Job finished successfully! 请重新开启 RED HAWK \n" . $cln;
         exit;
     }
     
@@ -29,7 +29,7 @@ else
   }
 thephuckinstart:
 echo "\n";
-userinput("Enter The Website You Want To Scan ");
+userinput("输入你要扫描的网站wiiiii~ ");
 $ip = trim(fgets(STDIN, 1024));
 if ($ip == "help")
   {
@@ -84,18 +84,18 @@ elseif (strpos($ip, '://') !== false)
   }
 elseif (strpos($ip, '.') == false)
   {
-    echo $bold . $red . "\n[!] Invalid URL Format! Enter A Valid URL\n" . $cln;
+    echo $bold . $red . "\n[!] 请输入域名或URL！\n" . $cln;
     goto thephuckinstart;
   }
 elseif (strpos($ip, ' ') !== false)
   {
-    echo $bold . $red . "\n[!] Invalid URL Format! Enter A Valid URL\n" . $cln;
+    echo $bold . $red . "\n[!] 请输入域名或URL！\n" . $cln;
     goto thephuckinstart;
   }
 else
   {
     echo "\n";
-    userinput("Enter 1 For HTTP OR Enter 2 For HTTPS");
+    userinput("输入 1 如果你是 HTTP 或者 输入 2 如果你是 HTTPS");
     echo $cln . $bold . $fgreen;
     $ipsl = trim(fgets(STDIN, 1024));
     if ($ipsl == "2")
@@ -115,7 +115,7 @@ system("clear");
       +--------------------------------------------------------------+
             $lblue Scanning Site : " . $fgreen . $ipsl . $ip . $blue . "
       \n\n";
-    echo $yellow . " [0]  Basic Recon$white (Site Title, IP Address, CMS, Cloudflare Detection, Robots.txt Scanner)$yellow \n [1]  Whois Lookup \n [2]  Geo-IP Lookup \n [3]  Grab Banners \n [4]  DNS Lookup \n [5]  Subnet Calculator \n [6]  NMAP Port Scan \n [7]  Subdomain Scanner \n [8]  Reverse IP Lookup & CMS Detection \n [9]  SQLi Scanner$white (Finds Links With Parameter And Scans For Error Based SQLi)$yellow \n [10] Bloggers View$white (Information That Bloggers Might Be Interested In)$yellow \n [11] WordPress Scan$white (Only If The Target Site Runs On WP)$yellow \n [12] Crawler \n [13] MX Lookup \n$magenta [A]  Scan For Everything - (The Old Lame Scanner) \n$blue [F]  Fix (Checks For Required Modules and Installs Missing Ones) \n$fgreen [U]  Check For Updates \n$white [B]  Scan Another Website (Back To Site Selection) \n$red [Q]  Quit! \n\n" . $cln;
+    echo $yellow . " [0]  Basic Recon$white (Site Title, IP Address, CMS, Cloudflare Detection, Robots.txt Scanner)$yellow \n [1]  Whois侦查 \n [2]  Geo-IP侦查 \n [3]  Grab Banners \n [4]  DNS侦查 \n [5]  Subnet Calculator \n [6]  NMAP端口扫描 \n [7]  域名爆破 \n [8]  反侦察IP地址 & CMS Detection \n [9]  SQLi 扫描$white (Finds Links With Parameter And Scans For Error Based SQLi)$yellow \n [10] Bloggers View$white (Information That Bloggers Might Be Interested In)$yellow \n [11] WordPress扫描$white (Only If The Target Site Runs On WP)$yellow \n [12] Crawler \n [13] MX Lookup \n$magenta [A]  选什么？！给我全扫！ - (The Old Lame Scanner) \n$blue [F]  Fix (Checks For Required Modules and Installs Missing Ones) \n$fgreen [U]  Check For Updates \n$white [B]  我改主意了我要扫描其它网站 (Back To Site Selection) \n$red [Q]  先下了 \n\n" . $cln;
 askscan:
     userinput("Choose Any Scan OR Action From The Above List");
     $scan = trim(fgets(STDIN, 1024));
